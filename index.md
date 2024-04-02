@@ -3,8 +3,8 @@
 
 ### Things i am interested in:
 
-1. Programming \
-2. Sports \
-3. Gaming \
+1. Programming
+2. Sports
+3. Gaming
 
---The world is flat.--
+-- The world is flat. --
