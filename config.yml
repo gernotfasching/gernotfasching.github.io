@@ -1,0 +1,9 @@
+---
+title: "This is a Cayman Themes YAML from `prettydoc` Package"
+author: "Type your name here"
+date: "`r Sys.Date()`"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    toc: yes
+---
