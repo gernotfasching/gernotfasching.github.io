@@ -6,6 +6,6 @@ pages:
     - npx @11ty/eleventy
   artifacts:
     paths:
-      - _site
+      - public
   only:
     -master
