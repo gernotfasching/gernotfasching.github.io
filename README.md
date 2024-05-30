@@ -3,15 +3,15 @@
 
 Create a website using the 11ty SSG. 
 
-1. Chose topic (add to this README.md)
+1. Chose topic (add to this README.md) DONE
    Topic: Anime
-3. Create landing page + 3 additional pages
-4. Create navigation bar that is shared between pages
-5. Configure and use nunjucks templates to show data
-6. Include images
-7. Contact formular (static html form) on one of the pages
+3. Create landing page + 3 additional pages DONE
+4. Create navigation bar that is shared between pages DONE
+5. Configure and use nunjucks templates to show data DONE
+6. Include images DONE
+7. Contact formular (static html form) on one of the pages DONE
 8. Use a theme
-9. Use a plugin (needs to be registered in .eleventy.js)
+9. Use a plugin (needs to be registered in .eleventy.js) DONE
 10. Upload source and exclude generated content (eg. site_) to git repository
 bonus: automatic deployment on git push
 

@@ -28,4 +28,12 @@ permalink: contact.html
       </div>
       <input type="hidden" name="utf8" value="✓">
       <button style="font-size:14px; background-color:#6b7ddf; color:#fff; font-weight:bold; padding:10px 35px; margin: 5px 0 0 0;" type="submit">SUBMIT</button>
+{% renderTemplate "liquid,md" %}
+## Anime - by Gernot Fasching
+
+* e-mail: gernot.fasching@bulme.at
+* address: 8200 Graz
+1. Read Informations
+1. Contact after
+    {% endrenderTemplate %}
 </div>
