@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Dies ist der Branch, auf den die Action reagiert. Du kannst 'main' anpassen, wenn du einen anderen Branch verwendest.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Verwendung von Ubuntu als Betriebssystem
+
+    steps:
+      # Schritt 1: Checkout des Codes
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Schritt 2: Setze Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Gib hier die Node.js-Version an, die du verwenden möchtest
+
+      # Schritt 3: Installiere Abhängigkeiten
+      - name: Install dependencies
+        run: npm install
+
+      # Schritt 4: Baue das Projekt
+      - name: Build project
+        run: npm run build
+
+      # Schritt 5: Installiere gh-pages (falls noch nicht installiert)
+      - name: Install gh-pages
+        run: npm install --save gh-pages
+
+      # Schritt 6: Deploy zu GitHub Pages
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token wird verwendet, um auf GitHub Pages zu deployen
