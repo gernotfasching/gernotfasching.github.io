@@ -3,7 +3,7 @@ import './Contact.css';
 import { useFormData } from 'herotofu-react';
 
 const Contact = () => {
-  const { formState, getFormSubmitHandler } = useFormData(
+  const { getFormSubmitHandler } = useFormData(
     'https://public.herotofu.com/v1/91318510-d26b-11ef-9a5c-d31370001c66'
   );
 
