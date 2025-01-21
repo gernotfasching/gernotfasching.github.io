@@ -1,121 +1,20 @@
-// This optional code is used to register a service worker.
-// register() is not called by default.
+// Dies ist der Code zur Deaktivierung des Service Workers
+// Statt den Service Worker zu registrieren, wird er jetzt abgemeldet, falls vorhanden.
 
-// This lets the app load faster on subsequent visits in production, and gives
-// it offline capabilities. However, it also means that developers (and users)
-// will only see deployed updates on the "N+1" visit to a page, since previously
-// cached resources are updated in the background.
-
-// To learn more about the benefits of this model, read https://cra.link/PWA
-
-const isLocalhost = Boolean(
-  window.location.hostname === 'localhost' ||
-  // [::1] is the IPv6 localhost address.
-  window.location.hostname === '[::1]' ||
-  // 127.0.0.1/8 is considered localhost for IPv4.
-  window.location.hostname.match(
-    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-  )
-);
-
-export function register(config) {
-  if ('serviceWorker' in navigator) {
-    const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
-    if (publicUrl.origin !== window.location.origin) {
-      return;
-    }
-
-    window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
-
-      if (isLocalhost) {
-        // This is running on localhost. Let's check if a service worker still exists or not.
-        checkValidServiceWorker(swUrl, config);
-
-        navigator.serviceWorker.ready.then(() => {
-          console.log(
-            'This web app is being served cache-first by a service ' +
-            'worker. To learn more, visit https://cra.link/PWA'
-          );
-        });
-      } else {
-        // Is not localhost. Just register service worker
-        registerValidSW(swUrl, config);
-      }
-    });
-  }
-}
-
-function registerValidSW(swUrl, config) {
-  navigator.serviceWorker
-  .register(swUrl)
-  .then(registration => {
-    registration.onupdatefound = () => {
-      const installingWorker = registration.installing;
-      if (installingWorker == null) {
-        return;
-      }
-      installingWorker.onstatechange = () => {
-        if (installingWorker.state === 'installed') {
-          if (navigator.serviceWorker.controller) {
-            console.log(
-              'New content is available and will be used when all ' +
-              'tabs for this page are closed. See https://cra.link/PWA.'
-            );
-
-            if (config && config.onUpdate) {
-              config.onUpdate(registration);
-            }
-          } else {
-            console.log('Content is cached for offline use.');
-
-            if (config && config.onSuccess) {
-              config.onSuccess(registration);
-            }
-          }
-        }
-      };
-    };
-  })
-  .catch(error => {
-    console.error('Error during service worker registration:', error);
-  });
-}
-
-function checkValidServiceWorker(swUrl, config) {
-  fetch(swUrl, {
-    headers: { 'Service-Worker': 'script' },
-  })
-  .then(response => {
-    const contentType = response.headers.get('content-type');
-    if (
-      response.status === 404 ||
-      (contentType != null && contentType.indexOf('javascript') === -1)
-    ) {
-      navigator.serviceWorker.ready.then(registration => {
-        registration.unregister().then(() => {
-          window.location.reload();
-        });
-      });
-    } else {
-      registerValidSW(swUrl, config);
-    }
-  })
-  .catch(() => {
-    console.log(
-      'No internet connection found. App is running in offline mode.'
-    );
-  });
-}
-
+// Dies wird nur ausgeführt, wenn der Browser den Service Worker unterstützt.
 export function unregister() {
   if ('serviceWorker' in navigator) {
+    // Versuche, den Service Worker abzumelden
     navigator.serviceWorker.ready
-    .then(registration => {
-      registration.unregister();
-    })
-    .catch(error => {
-      console.error('Error during service worker unregistration:', error);
-    });
+      .then(registration => {
+        registration.unregister(); // Abmeldung des Service Workers
+      })
+      .catch(error => {
+        console.error('Fehler beim Abmelden des Service Workers:', error);
+      });
   }
 }
+
+// Hier muss der Service Worker nicht mehr registriert werden
+// Die Registrierung wird entfernt, damit keine Fehler auftreten
+// Wenn du den Service Worker in der Zukunft wieder aktivieren möchtest, kannst du die Funktion "register" hinzufügen.
