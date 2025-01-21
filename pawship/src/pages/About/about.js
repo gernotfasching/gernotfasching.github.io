@@ -1,13 +1,13 @@
 import React from 'react';
 import './about.css';
 
-const alex = process.env.PUBLIC_URL + '/images/Team/' + 'alex.png';
-const max = process.env.PUBLIC_URL + '/images/Team/' + 'max.png';
-const tobias = process.env.PUBLIC_URL + '/images/Team/' + 'tobias.png';
-const johanna = process.env.PUBLIC_URL + '/images/Team/' + 'johanna.png';
-const nevena = process.env.PUBLIC_URL + '/images/Team/' + 'nevena.png';
-const philipp = process.env.PUBLIC_URL + '/images/Team/' + 'philipp.png';
-const gernot = process.env.PUBLIC_URL + '/images/Team/' + 'gernot.png';
+const alex = `${process.env.PUBLIC_URL}/images/Team/alex.png`;
+const max = `${process.env.PUBLIC_URL}/images/Team/max.png`;
+const tobias = `${process.env.PUBLIC_URL}/images/Team/tobias.png`;
+const johanna = `${process.env.PUBLIC_URL}/images/Team/johanna.png`;
+const nevena = `${process.env.PUBLIC_URL}/images/Team/nevena.png`;
+const philipp = `${process.env.PUBLIC_URL}/images/Team/philipp.png`;
+const gernot = `${process.env.PUBLIC_URL}/images/Team/gernot.png`;
 
 const About = () => {
   const team = [
@@ -59,8 +59,6 @@ const About = () => {
             <p>Nevena</p>
           </div>
       </div>
-
-
     </div>
   );
 };
