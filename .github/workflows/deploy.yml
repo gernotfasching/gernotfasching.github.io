@@ -35,7 +35,13 @@ jobs:
         run: npm install --save gh-pages
         working-directory: ./pawship  # Der Ordner, der die `package.json` enthält
 
-      # Schritt 6: Deploy zu GitHub Pages
+      # Schritt 6: Konfiguriere Git mit deinem Benutzernamen und deiner E-Mail
+      - name: Configure Git
+        run: |
+          git config --global user.name "gernotfasching"
+          git config --global user.email "gernotfasch@gmail.com"
+
+      # Schritt 7: Deploy zu GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
         working-directory: ./pawship  # Der Ordner, der das Projekt enthält
