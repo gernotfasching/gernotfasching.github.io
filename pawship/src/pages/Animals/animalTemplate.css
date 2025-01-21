@@ -1,0 +1,130 @@
+
+.atCarousel .slide img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.atCarousel {
+    max-width: 50%;
+    margin-left: 10%;
+}
+
+.animalTemplate {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.attitle-box {
+    background-color: rgb(217, 251, 217);
+    border: 5px solid rgb(217, 251, 217);
+    width: 50%;
+    border-radius: 10px;
+    padding-left: 60%;
+    padding-right: 80%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-left: 20%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.steckbrief {
+    border: 5px solid rgb(217, 251, 217);
+    width: 50%;
+    border-radius: 10px;
+    padding-left: 60%;
+    padding-right: 80%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 20%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+
+.steckbrief .info {
+    display: inline-block;
+    text-align: left;
+}
+
+
+
+.steckbrief h3 {
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.steckbrief h2 {
+    font-size: 30px;
+}
+
+.steckbrief .label {
+    font-weight: bold;
+}
+
+.steckbrief .value {
+    font-weight: normal;
+
+}
+
+.steckbrief ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.steckbrief ul li {
+    text-align: center;
+    font-size: 20px;
+}
+
+.attitle-box h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+    .attitle-box,
+    .steckbrief {
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .attitle-box,
+    .steckbrief {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .attitle-box,
+    .steckbrief {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media (max-width: 767px) {
+    .attitle-box,
+    .steckbrief {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .animalTemplate {
+        flex-direction: column;
+    }
+}

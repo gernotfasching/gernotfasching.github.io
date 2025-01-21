@@ -1,0 +1,159 @@
+{
+  "dogs": [
+    {
+      "name": "Laika",
+      "gender": "weiblich",
+      "age": 4,
+      "nature": [
+        "zurückhaltend",
+        "verspielt",
+        "lernbegierig"
+      ],
+      "images": [
+        "Laika1.png",
+        "Laika2.png",
+        "Laika3.png",
+        "Laika4.png",
+        "Laika5.png"
+      ]
+    },
+    {
+      "name": "Mia",
+      "gender": "weiblich",
+      "age": 4,
+      "nature": [
+        "Diva",
+        "verspielt",
+        "gutaussehend"
+      ],
+      "images": [
+        "Mia1.png",
+        "Mia2.png",
+        "Mia4.png"
+      ]
+    },
+    {
+      "name": "JJ",
+      "gender": "männlich",
+      "age": 4,
+      "nature": [
+        "verspielt",
+        "liebesbedürftig",
+        "speziell"
+      ],
+      "images": [
+        "JJ1.png",
+        "JJ2.png",
+        "JJ3.png",
+        "JJ4.png",
+        "JJ5.png",
+        "JJ6.png"
+      ]
+    },
+    {
+      "name": "Sammie",
+      "gender": "männlich",
+      "age": 4,
+      "nature": [
+        "fröhlich",
+        "aktiv",
+        "liebesbedürftig"
+      ],
+      "images": [
+        "Sammie1.png",
+        "Sammie2.png",
+        "Sammie3.png"
+      ]
+    }
+  ],
+  "cats": [
+    {
+      "name": "Simba",
+      "gender": "männlich",
+      "age": 6,
+      "nature": [
+        "neugierig",
+        "verschmust",
+        "vokal"
+      ],
+      "images": [
+        "Simba1.png",
+        "Simba2.png"
+      ]
+    },
+    {
+      "name": "Nala",
+      "gender": "weiblich",
+      "age": 6,
+      "nature": [
+        "verschmust",
+        "entspannt",
+        "anhänglich"
+      ],
+      "images": [
+        "Nala1.png",
+        "Nala2.png"
+      ]
+    },
+    {
+      "name": "Mogli",
+      "gender": "männlich",
+      "age": 3,
+      "nature": [
+        "Verspielt",
+        "Macht lustige Pieps-Geräusche",
+        "Tollpatschig"
+      ],
+      "images": [
+        "Mogli1.png",
+        "Mogli2.png",
+        "Mogli3.png",
+        "Mogli4.png"
+      ]
+    },
+    {
+      "name": "Sammy",
+      "gender": "Männlich",
+      "age": 5,
+      "nature": [
+        "Sehr gelassen",
+        "Jagt gerne Mäuse",
+        "Purfect"
+      ],
+      "images": [
+        "Sammy1.png",
+        "Sammy2.png",
+        "Sammy3.png",
+        "Sammy4.png"
+      ]
+    },
+    {
+      "name": "Baghira",
+      "gender": "männlich",
+      "age": 10,
+      "nature": [
+        "sehr schüchtern",
+        "liebt Streicheleinheiten und Ruhe",
+        "ist ein Freigänger, der Auslauf benötigt"
+      ],
+      "images": [
+        "Baghira1.png",
+        "Baghira2.png",
+        "Baghira3.png"
+      ]
+    },
+    {
+      "name": "Lucky",
+      "gender": "männlich",
+      "age": 14,
+      "nature": [
+        "faul",
+        "Schlafmütze",
+        "Kuscheltier"
+      ],
+      "images": [
+        "Lucky1.png"
+      ]
+    }
+  ]
+}

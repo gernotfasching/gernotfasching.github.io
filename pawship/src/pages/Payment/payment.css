@@ -1,0 +1,77 @@
+.payment-box {
+    background-color: rgb(217, 251, 217);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.submit-button {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 650px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+p {
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .payment-box {
+        padding: 15px;
+    }
+
+    .submit-button {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-box {
+        padding: 10px;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}

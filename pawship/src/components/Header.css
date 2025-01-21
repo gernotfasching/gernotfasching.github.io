@@ -1,0 +1,28 @@
+header {
+  background-color: #90EE90; 
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px; 
+  margin-right: 35px;
+  margin-left: 35px;
+}
+
+@media (max-width: 850px) {
+  .logo_container {
+      justify-content: center; 
+  }
+}

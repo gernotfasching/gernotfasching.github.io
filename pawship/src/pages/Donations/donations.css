@@ -1,0 +1,159 @@
+.Donations {
+    text-align: center;
+}
+
+.donation-box {
+    background-color: rgb(217, 251, 217);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.options {
+    font-weight: bold;
+    color: rgb(1, 59, 1);
+}
+
+input[name="option"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.prices {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.prices input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+}
+
+input[type="radio"]:checked + .radio-box {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.oder {
+    font-weight: bold;
+}
+
+.self-price input[type="number"] {
+    width: 70%;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.data {
+    background-color: rgb(217, 251, 217);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 70%;
+    max-width: 800px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    display: block;
+}
+
+select,
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+    box-sizing: border-box;
+}
+
+select {
+    width: 70%;
+    max-width: 800px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 650px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .donation-box,
+    .data {
+        width: 90%;
+    }
+
+    .prices {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .radio-box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .self-price input[type="number"],
+    select,
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+    }
+}
