@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Dies ist der Branch, auf den die Action reagiert. Du kannst 'main' anpassen, wenn du einen anderen Branch verwendest.
+      - main  # Dies ist der Branch, auf den die Action reagiert.
 
 jobs:
   deploy:
@@ -23,17 +23,21 @@ jobs:
       # Schritt 3: Installiere Abhängigkeiten
       - name: Install dependencies
         run: npm install
+        working-directory: ./pawship  # Stelle sicher, dass du den richtigen Ordner angibst, in dem package.json liegt
 
       # Schritt 4: Baue das Projekt
       - name: Build project
         run: npm run build
+        working-directory: ./pawship  # Der Ordner, der die `package.json` und das Projekt enthält
 
       # Schritt 5: Installiere gh-pages (falls noch nicht installiert)
       - name: Install gh-pages
         run: npm install --save gh-pages
+        working-directory: ./pawship  # Der Ordner, der die `package.json` enthält
 
       # Schritt 6: Deploy zu GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
+        working-directory: ./pawship  # Der Ordner, der das Projekt enthält
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token wird verwendet, um auf GitHub Pages zu deployen
